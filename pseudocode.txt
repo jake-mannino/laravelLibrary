@@ -1,9 +1,0 @@
-use controller
-
-or route
-
-get checked_out Books
-
-php migrate:fresh runs all the "down" functions
-
-migrate:fresh  --seed 
