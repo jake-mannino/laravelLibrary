@@ -20,4 +20,10 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::get('/books/all', [App\Http\Controllers\BookController::class, 'index']);
 
+Route::get('/users/all', [App\Http\Controllers\UserController::class, 'index']);
+
 Route::post('/books/new', [App\Http\Controllers\BookController::class, 'create']);
+
+Route::post('/users/new', [App\Http\Controllers\UserConstroller:: class, 'create']);
+
+Route::get('/users/{id}/checkouts/{id}/checkoutpunishments/{id}/punishments/all', [App\Http\Controllers\PunishmentController::class, 'index']); 

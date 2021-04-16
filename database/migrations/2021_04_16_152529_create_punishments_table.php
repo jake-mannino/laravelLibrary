@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateUsersTable extends Migration
+class CreatePunishmentsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,16 @@ class CreateUsersTable extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('punishments', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('email');
-            $table->string('password');
-            $table->string('remember_token');
-            $table->timestamp('email_verified_at');
-            $table->timestamps();
+            $table->string('method_label');
+            $table->int('amount_of_pain');
+            $table->int('psychological_factor');
+            $table->boolean('shreck');
+            $table->string('danny_devito_coefficient');
+            $table->timestamp('punishment_start');
+            $table->boolean('forever');
+            $table->timestamp('punishment_end')
         });
     }
   //this is actually code for create books table, not creat users table
@@ -34,7 +36,7 @@ class CreateUsersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('punishments');
       //how tables get deleted
     }
 }

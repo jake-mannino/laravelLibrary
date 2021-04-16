@@ -20,6 +20,7 @@ class BookFactory extends Factory {
       'pages' => $this->faker->numberBetween(2, 50),
       'cost' => $this->faker->randomFloat(2, 10, 50),
       'value' => $this->faker->randomFloat(2, 10, 50),
+      'reading_difficulty' => $this->faker->numberBetween(1,10),
       'released' => $this->faker->datetime(),
       'current_conditon' => 1,
       'status' => 1,

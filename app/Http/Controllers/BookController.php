@@ -14,11 +14,11 @@ class BookController extends Controller
   public function create(Request $request){
     //book create, save
     $book = new Book();
-    $book->title = 'Clean Code';
+    $book->title = 'Shreck 5';
     $book->isbn =  '';
-    $book->pages = 200;
-    $book->cost = 20.0;
-    $book->value = 20.0;
+    $book->pages = 100000000000000;
+    $book->cost = 9999.0;
+    $book->value = 99999.0;
     $book->current_condition = 0;
     
     $book->save();
@@ -31,7 +31,7 @@ class BookController extends Controller
     $book->save();
     
   }
-  public function destory($id){
+  public function destroy($id){
     //can name this function delete instead, this is a hard delete, not soft
     Book::find($id)->delete();
     
